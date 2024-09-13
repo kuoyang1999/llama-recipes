@@ -28,7 +28,7 @@ def load_xsum_data(requests):
         top_p = request['top_p']
         max_tokens = request['max_tokens']
         n = request['n']
-        result = {'request': request['article'], 'lable': label, 'result': {}} # request is the document that needs to be summarized, result is the summary
+        result = {'request': request['article'], 'lable': label, 'result': '', 'analysis': {}} # request is the document that needs to be summarized, result is the summary
         responses.append((result, prompt, label, temperature, stop, top_p, max_tokens, n))
     return responses
 
@@ -42,6 +42,6 @@ def load_cnn_dailymail_data(requests):
         top_p = request['top_p']
         max_tokens = request['max_tokens']
         n = request['n']
-        result = {'request': request['article'], 'lable': label, 'result': {}} # request is the document that needs to be summarized, result is the summary
+        result = {'request': request['article'], 'lable': label, 'result': '', 'analysis': {}} # request is the document that needs to be summarized, result is the summary
         responses.append((result, prompt, label, temperature, stop, top_p, max_tokens, n))
     return responses
